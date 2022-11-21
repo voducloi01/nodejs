@@ -2,6 +2,10 @@ const port = 3000;
 const morgan = require("morgan");
 const express = require("express");
 const route = require('./routes')
+ const db = require('./config/db')
+
+//connect db
+db.connect() ; 
 
 const { engine } = require("express-handlebars");
 
@@ -13,7 +17,7 @@ app.use(morgan("combined"));
 app.use(express.static(path.join(__dirname, "public")));
 app.engine("hbs", engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources/views"));
+app.set("views", path.join(__dirname, "resources","views"));
 
 
 route(app) ; 

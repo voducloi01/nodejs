@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+ 
   "scripts": {
     "start": "nodemon --inspect src/index.js",
     "run": "node --inspect index.js",
-    "watch":"node-sass -w src/resources/scss/ -o src/public/css/ ",
+    "watch": "node-sass -w src/resources/scss/ -o src/public/css/ ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,9 +27,11 @@
     "devtools": "^7.25.1",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
+    "mongoose": "^6.7.2",
     "nodemon": "^2.0.20"
   },
   "devDependencies": {
+    "handlebars": "4.5.0",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.3"
   }
